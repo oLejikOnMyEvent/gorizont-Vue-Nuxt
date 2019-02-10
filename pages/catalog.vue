@@ -1,238 +1,44 @@
 <template>
 <div>
 
-<v-container fluid>
-<v-layout row wrap>
+  <v-layout justify-center>
+    
 
+    <v-flex lg8>
+      <v-window
+        v-model="window"
+        class="elevation-1"
+        vertical
+      >
+        <v-window-item
+          v-for="n in length"
+          :key="n"
+        >
+          <v-card flat>
+            <v-card-text>
+              <v-layout align-center mb-3>
+           
+              
+              </v-layout>
 
-    <v-flex md3 class="selects" >
+              
+
+             
+
+              <v-flex lg2>
         <v-select
-          :items="items"
-          label="Solo field"
-          solo
-        ></v-select>
-        <v-select
-          :items="items"
-          label="Solo field"
-          solo
-        ></v-select>
-        <v-select
-          :items="items"
-          label="Solo field"
-          solo
-        ></v-select>
-         <v-select
-          :items="items"
-          label="Solo field"
-          solo
-        ></v-select>
-         <v-select
-          :items="items"
-          label="Solo field"
-          solo
-        ></v-select>
-         <v-select
-          :items="items"
-          label="Solo field"
-          solo
-        ></v-select>
-         <v-select
           :items="items"
           label="Solo field"
           solo
         ></v-select>
       </v-flex>
+            </v-card-text>
+          </v-card>
+        </v-window-item>
+      </v-window>
+    </v-flex>
+  </v-layout>
 
-      
-
-<v-flex md3>
-
- <v-hover>
-    <v-card
-      slot-scope="{ hover }"
-      :class="`elevation-${hover ? 12 : 2}`"
-      class="mx-auto"
-      width="250"
-    >
-      <v-img
-        :aspect-ratio="16/9"
-        src="https://cdn.vuetifyjs.com/images/cards/cooking.png"
-      ></v-img>
-      <v-card-title>
-        <div>
-          <span class="headline">Cafe Badilico</span>
-        </div>
-      </v-card-title>
-    </v-card>
-  </v-hover>
-
-  <v-hover>
-    <v-card
-      slot-scope="{ hover }"
-      :class="`elevation-${hover ? 12 : 2}`"
-      class="mx-auto"
-      width="250"
-    >
-      <v-img
-        :aspect-ratio="16/9"
-        src="https://cdn.vuetifyjs.com/images/cards/cooking.png"
-      ></v-img>
-      <v-card-title>
-        <div>
-          <span class="headline">Cafe Badilico</span>
-        </div>
-      </v-card-title>
-    </v-card>
-  </v-hover>
-
-  
-
-  <v-hover>
-    <v-card
-      slot-scope="{ hover }"
-      :class="`elevation-${hover ? 12 : 2}`"
-      class="mx-auto"
-      width="250"
-    >
-      <v-img
-        :aspect-ratio="16/9"
-        src="https://cdn.vuetifyjs.com/images/cards/cooking.png"
-      ></v-img>
-      <v-card-title>
-        <div>
-          <span class="headline">Cafe Badilico</span>
-        </div>
-      </v-card-title>
-    </v-card>
-  </v-hover>
-  </v-flex> 
-
-  <v-flex md3>
-
-     <v-hover>
-    <v-card
-      slot-scope="{ hover }"
-      :class="`elevation-${hover ? 12 : 2}`"
-      class="mx-auto"
-      width="250"
-    >
-      <v-img
-        :aspect-ratio="16/9"
-        src="https://cdn.vuetifyjs.com/images/cards/cooking.png"
-      ></v-img>
-      <v-card-title>
-        <div>
-          <span class="headline">Cafe Badilico</span>
-        </div>
-      </v-card-title>
-    </v-card>
-  </v-hover>
-  <v-hover>
-    <v-card
-      slot-scope="{ hover }"
-      :class="`elevation-${hover ? 12 : 2}`"
-      class="mx-auto"
-      width="250"
-    >
-      <v-img
-        :aspect-ratio="16/9"
-        src="https://cdn.vuetifyjs.com/images/cards/cooking.png"
-      ></v-img>
-      <v-card-title>
-        <div>
-          <span class="headline">Cafe Badilico</span>
-        </div>
-      </v-card-title>
-    </v-card>
-  </v-hover>  
-
-   <v-hover>
-    <v-card
-      slot-scope="{ hover }"
-      :class="`elevation-${hover ? 12 : 2}`"
-      class="mx-auto"
-      width="250"
-    >
-      <v-img
-        :aspect-ratio="16/9"
-        src="https://cdn.vuetifyjs.com/images/cards/cooking.png"
-      ></v-img>
-      <v-card-title>
-        <div>
-          <span class="headline">Cafe Badilico</span>
-        </div>
-      </v-card-title>
-    </v-card>
-  </v-hover>
-  </v-flex>
-
-  <v-flex md3>
-  <v-hover>
-    <v-card
-      slot-scope="{ hover }"
-      :class="`elevation-${hover ? 12 : 2}`"
-      class="mx-auto"
-      width="250"
-    >
-      <v-img
-        :aspect-ratio="16/9"
-        src="https://cdn.vuetifyjs.com/images/cards/cooking.png"
-      ></v-img>
-      <v-card-title>
-        <div>
-          <span class="headline">Cafe Badilico</span>
-        </div>
-      </v-card-title>
-    </v-card>
-  </v-hover>
-
- <v-hover>
-    <v-card
-      slot-scope="{ hover }"
-      :class="`elevation-${hover ? 12 : 2}`"
-      class="mx-auto"
-      width="250"
-    >
-      <v-img
-        :aspect-ratio="16/9"
-        src="https://cdn.vuetifyjs.com/images/cards/cooking.png"
-      ></v-img>
-      <v-card-title>
-        <div>
-          <span class="headline">Cafe Badilico</span>
-        </div>
-      </v-card-title>
-    </v-card>
-  </v-hover>
-  
-  
-   <v-hover>
-    <v-card
-      slot-scope="{ hover }"
-      :class="`elevation-${hover ? 12 : 2}`"
-      class="mx-auto"
-      width="250"
-    >
-      <v-img
-        :aspect-ratio="16/9"
-        src="https://cdn.vuetifyjs.com/images/cards/cooking.png"
-      ></v-img>
-      <v-card-title>
-        <div>
-          <span class="headline">Cafe Badilico</span>
-        </div>
-      </v-card-title>
-    </v-card>
-  </v-hover>
-  </v-flex>
-
-  
- 
-  
-</v-layout>
-
-
-</v-container>
 
 
 
@@ -249,16 +55,14 @@
 </div>
   </template>
 <script>
-export default {
-  data () {
-    return {
-      price: 100
-    }
+  export default {
+    data: () => ({
+      length: 3,
+      window: 0
+    })
   }
-}
 </script>
 
 <style scope>
-.selects{
-}
+
 </style>
